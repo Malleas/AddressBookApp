@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AddressBookApp</string>
+    <string name="addContact">Add Contact</string>
+    <string name="showAllContacts">Show All Contacts</string>
+    <string name="showContactById">Show Contact By ID</string>
+    <string name="editContactById">Edit Contact By ID</string>
+    <string name="searchByName">Search (name)</string>
+    <string name="searchCity">Search (city)</string>
+    <string name="searchDescription">Search (description)</string>
+    <string name="exit">Exit</string>
+    <string name="addPersonalContact">Add Personal Contact</string>
+    <string name="addBusinessContact">Add Business Contact</string>
+    <string name="back">Back</string>
+    <string name="id">Enter ID</string>
+    <string name="searchId">Search</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="search">Search</string>
+    <string name="addPhoto">Uload Photo</string>
+    <string name="add">Add New Contact</string>
+    <string name="photo">Update Photo Information</string>
+    <string name="navToLocationUpdatePage">Update Location Info</string>
+    <string name="updateConact">Update</string>
+</resources>

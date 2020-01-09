@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3c6382"
+    tools:context=".ShowContactById">
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/id" />
+
+    <Button
+        android:id="@+id/btn_searchId"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:background="#60a3bc"
+        android:text="@string/searchId"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+
+    <ListView
+        android:id="@+id/lv_displayContact"
+        android:layout_width="380dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_searchId" />
+
+    <TextView
+        android:id="@+id/tv_updateContactQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lv_displayContact" />
+
+    <Button
+        android:id="@+id/btn_yes"
+        android:layout_width="180dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="44dp"
+        android:background="#60a3bc"
+        android:text="@string/yes"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_displayContact" />
+
+    <Button
+        android:id="@+id/btn_no"
+        android:layout_width="180dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#60a3bc"
+        android:text="Button"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_displayContact"
+        tools:text="@string/no" />
+</androidx.constraintlayout.widget.ConstraintLayout>

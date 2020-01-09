@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3c6382"
+    tools:context=".PersonalContact">
+
+    <EditText
+        android:id="@+id/et_personalCity"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="City"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalStreetAddress" />
+
+    <EditText
+        android:id="@+id/et_personalNameEntry"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_personalPhoneEntry"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="@android:string/emptyPhoneNumber"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalNameEntry" />
+
+    <EditText
+        android:id="@+id/et_personalPhotoName"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Photo Name"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalPhoneEntry" />
+
+    <EditText
+        android:id="@+id/et_personalPhotoDate"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="date"
+        android:text="Photo Date"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalPhotoName" />
+
+    <EditText
+        android:id="@+id/et_personalPhotoDescription"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Photo Description"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalPhotoDate" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#60a3bc"
+        android:text="@string/addPhoto"
+        android:textColor="@android:color/white"
+        android:textSize="24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalPhotoDescription" />
+
+    <EditText
+        android:id="@+id/et_personalStreetAddress"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Street Address"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <EditText
+        android:id="@+id/et_personalState"
+        android:layout_width="90dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="State"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/et_personalCity"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalStreetAddress" />
+
+    <EditText
+        android:id="@+id/et_personalZipCode"
+        android:layout_width="122dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Zip Code"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_personalState"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalStreetAddress" />
+
+    <EditText
+        android:id="@+id/et_personalDateOfBirth"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="date"
+        android:text="Date of Birth"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalState" />
+
+    <EditText
+        android:id="@+id/et_personalContactDescription"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Contact Description"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalDateOfBirth" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#60A3bc"
+        android:text="@string/add"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalContactDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

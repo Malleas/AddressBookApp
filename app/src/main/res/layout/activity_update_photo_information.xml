@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3c6382"
+    tools:context=".UpdatePhotoInformation">
+
+    <Button
+        android:id="@+id/btn_updateContact2"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="380dp"
+        android:background="#86ADBC"
+        android:text="@string/updateConact"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="File Name"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Photo Date"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Photo Description"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <TextView
+        android:id="@+id/tv_photoId"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#ffd1bc"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

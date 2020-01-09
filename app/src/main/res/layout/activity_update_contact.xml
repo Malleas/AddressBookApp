@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3c6382"
+    tools:context=".UpdateContact">
+
+    <Button
+        android:id="@+id/btn_back2"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:background="#98B2BC"
+        android:text="@string/back"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_updateContact" />
+
+    <EditText
+        android:id="@+id/et_updateName"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_updatePhone"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="@android:string/emptyPhoneNumber"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_updateName" />
+
+    <Button
+        android:id="@+id/btn_navToPhotoUpdatePage"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:background="#60a3bc"
+        android:text="@string/photo"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_updatePhone" />
+
+    <Button
+        android:id="@+id/btn_navToLocationUpdatePage"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:background="#73A8BC"
+        android:text="@string/navToLocationUpdatePage"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_navToPhotoUpdatePage" />
+
+    <EditText
+        android:id="@+id/et_updateDateOfBirth"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="date"
+        android:text="Date of Birth"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_navToLocationUpdatePage" />
+
+    <EditText
+        android:id="@+id/et_updateContactDescription"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Contact Description"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_updateDateOfBirth" />
+
+    <EditText
+        android:id="@+id/et_updateOpeningHour"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Opening Hour"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_updateContactDescription" />
+
+    <EditText
+        android:id="@+id/et_updateClosingHour"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Closing Hour"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_updateOpeningHour" />
+
+    <EditText
+        android:id="@+id/et_updateWebsiteURL"
+        android:layout_width="380dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffd1bc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Website URL"
+        android:textColor="#FFD1BC"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_updateClosingHour" />
+
+
+    <Button
+        android:id="@+id/btn_updateContact"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:background="#86ADBC"
+        android:text="@string/updateConact"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_updateWebsiteURL" />
+</androidx.constraintlayout.widget.ConstraintLayout>
