@@ -28,7 +28,7 @@ public class ShowAllContacts extends AppCompatActivity {
 
         btn_back = findViewById(R.id.btn_back);
         lv_contactList = findViewById(R.id.lv_contactList);
-        myContacts = ((MyContacts) this.getApplication()).getMyContacts();
+        myContacts = ((MyApplication) this.getApplication()).getMyContacts();
         adapter = new ContactAdapter(ShowAllContacts.this, myContacts);
 
         lv_contactList.setAdapter(adapter);
@@ -59,7 +59,7 @@ public class ShowAllContacts extends AppCompatActivity {
 
             if(type.equals("Personal")){
                 Location location = new Location(streetAddress, city, state, zipCode);
-                PersonalContact personalContact = new PersonalContact(type, name, phoneNumber, location, dateOfBirth, description);
+                //PersonalContact personalContact = new PersonalContact(type, name, phoneNumber, location, dateOfBirth, description);
             }
 
         }

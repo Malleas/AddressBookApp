@@ -12,11 +12,11 @@ import android.widget.TextView;
 public class ContactAdapter extends BaseAdapter {
 
     Activity mActivity;
-    BaseContact contact;
+    MyContacts myContacts;
 
-    public ContactAdapter(Activity mActivity, BaseContact contact) {
+    public ContactAdapter(Activity mActivity, MyContacts contact) {
         this.mActivity = mActivity;
-        this.contact = contact;
+        this.myContacts = contact;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class ContactAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public MyContacts getItem(int position) {
         return null;
     }
 
@@ -53,7 +53,7 @@ public class ContactAdapter extends BaseAdapter {
         TextView tv_contactwebsiteUrl = contactOneLine.findViewById(R.id.tv_contactWebsiteURL);
         ImageView iv_portraitPicture = contactOneLine.findViewById(R.id.iv_portraitPicture);
 
-        BaseContact contact = (BaseContact) this.getItem(position);
+        MyContacts myContacts = this.getItem(position);
         BusinessContact businessContact = (BusinessContact) this.getItem(position);
         PersonalContact personalContact = (PersonalContact) this.getItem(position);
         int portrait_resource_numbers [] = {
@@ -75,20 +75,37 @@ public class ContactAdapter extends BaseAdapter {
                 R.drawable.image_016
         };
 
-        tv_contactName.setText(contact.getName());
-        tv_contactBusinessName.setText(businessContact.getBusinessName());
-        tv_contactPhoneNumber.setText(contact.getPhoneNumber());
-        tv_contactStreetAddress.setText(contact.getLocation().getStreetAddress());
-        tv_contactCity.setText(contact.getLocation().getCity());
-        tv_contactState.setText(contact.getLocation().getState());
-        tv_contactZipCode.setText(contact.getLocation().getZipCode());
-        tv_contactDateOfBirth.setText(personalContact.getDateOfBirth());
-        tv_contactDescription.setText(personalContact.getDescription());
-        tv_contactBusinessOpenHour.setText(businessContact.getOpeningHour());
-        tv_contactBusinessCloseHour.setText(businessContact.getClosingHour());
-        tv_contactwebsiteUrl.setText(businessContact.getWebsiteURL());
-        iv_portraitPicture.setImageResource(portrait_resource_numbers[contact.getPhotoId()]);
-        String type = contact.getType();
+        tv_contactName.setText(myContacts.getMyContacts().get(position).getName());
+        tv_contactPhoneNumber.setText(myContacts.getMyContacts().get(position).getPhoneNumber());
+        tv_contactStreetAddress.setText(myContacts.getMyContacts().get(position).getLocation().getStreetAddress());
+        tv_contactCity.setText(myContacts.getMyContacts().get(position).getLocation().getCity());
+        tv_contactState.setText(myContacts.getMyContacts().get(position).getLocation().getState());
+        tv_contactZipCode.setText(myContacts.getMyContacts().get(position).getLocation().getZipCode());
+        iv_portraitPicture.setImageResource(portrait_resource_numbers[myContacts.getMyContacts().get(position).getPhotoId()]);
+
+        String type = myContacts.getMyContacts().get(position).getType();
+
+        if(type.equals("Personal"){
+            tv_contactBusinessCloseHour.setVisibility(View.INVISIBLE);
+            tv_contactBusinessOpenHour.setVisibility(View.INVISIBLE);
+            tv_contactBusinessName.setVisibility(View.INVISIBLE);
+            tv_contactwebsiteUrl.setVisibility(View.INVISIBLE);
+            tv_contactDateOfBirth.setText(personalContact.getDateOfBirth());
+            tv_contactDescription.setText(personalContact.getDescription());
+
+        }else if(type.equals("Business")){
+            tv_contactDateOfBirth.setVisibility(View.INVISIBLE);
+            tv_contactDescription.setVisibility(View.INVISIBLE);
+            tv_contactBusinessName.setText(myContacts.getMyContacts().indexOf());
+            tv_contactBusinessOpenHour.setText(businessContact.getOpeningHour());
+            tv_contactBusinessCloseHour.setText(businessContact.getClosingHour());
+            tv_contactwebsiteUrl.setText(businessContact.getWebsiteURL());
+        }
+
+
+
+
+
 
         return contactOneLine;
     }

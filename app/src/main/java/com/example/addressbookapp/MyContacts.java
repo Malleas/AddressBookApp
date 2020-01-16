@@ -46,12 +46,13 @@ public class MyContacts {
                         ((BusinessContact) myContacts.get(i)).getOpeningHour(),
                         ((BusinessContact) myContacts.get(i)).getClosingHour(),
                         ((BusinessContact) myContacts.get(i)).getWebsiteURL(),
-                        ((BusinessContact) myContacts.get(i)).getBusinessName()
-                );
+                        ((BusinessContact) myContacts.get(i)).getBusinessName());
                 myContacts.add(businessContact);
             }
         }
     }
+
+
 
     public List<BaseContact> getMyContacts() {
         return myContacts;
