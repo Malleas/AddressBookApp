@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.942" />
 
     <ListView
-        android:id="@+id/lv_contact"
+        android:id="@+id/lv_contactList"
         android:layout_width="380dp"
         android:layout_height="400dp"
         android:background="@android:color/white"

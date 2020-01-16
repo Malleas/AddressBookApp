@@ -12,11 +12,9 @@
         <activity android:name=".updateLocationPage"></activity>
         <activity android:name=".UpdatePhotoInformation" />
         <activity android:name=".UpdateContact" />
-        <activity android:name=".BusinessContact" />
-        <activity android:name=".PersonalContact" />
-        <activity android:name=".ExitPage" />
+        <activity android:name=".BusinessContactPage" />
+        <activity android:name=".PersonalContactPage" />
         <activity android:name=".SearchPage" />
-        <activity android:name=".ShowContactById" />
         <activity android:name=".ShowAllContacts" />
         <activity android:name=".AddContactPage" />
         <activity android:name=".MainActivity">

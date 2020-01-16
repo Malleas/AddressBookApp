@@ -2,26 +2,49 @@ package com.example.addressbookapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_addContact, btn_showAllContacts, btn_showContactById, btn_editContactById, btn_searchName,
-    btn_searchCity, btn_searchDescription, btn_exit;
+    Button btn_addContact, btn_showAllContacts, btn_searchForContacts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_addContact = findViewById(R.id.btn_addContact);
+        btn_addContact = findViewById(R.id.btn_addNewPersonalContact);
         btn_showAllContacts = findViewById(R.id.btn_showAllContacts);
-        btn_showContactById = findViewById(R.id.btn_showContactById);
-        btn_editContactById = findViewById(R.id.btn_editContactById);
-        btn_searchName = findViewById(R.id.btn_searchName);
-        btn_searchCity = findViewById(R.id.btn_searchCity);
-        btn_searchDescription = findViewById(R.id.btn_searchDescription);
-        btn_exit = findViewById(R.id.btn_exit);
+        btn_searchForContacts = findViewById(R.id.btn_searchForContacts);
+
+        btn_addContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), AddContactPage.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_showAllContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ShowAllContacts.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_searchForContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), SearchPage.class);
+                startActivity(intent);
+            }
+        });
+
+
+
     }
 }

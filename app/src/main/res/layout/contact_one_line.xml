@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3c6382">
+
+    <ImageView
+        android:id="@+id/iv_portraitPicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_001" />
+
+    <TextView
+        android:id="@+id/tv_contactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Name"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/iv_portraitPicture"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_contactPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/phoneNumberHInt"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/iv_portraitPicture"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactName" />
+
+    <TextView
+        android:id="@+id/tv_contactStreetAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/streetAddressHint"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/iv_portraitPicture"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactPhoneNumber" />
+
+    <TextView
+        android:id="@+id/tv_contactCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="City"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/iv_portraitPicture"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactStreetAddress" />
+
+    <TextView
+        android:id="@+id/tv_contactState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="State"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/tv_contactCity"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactStreetAddress" />
+
+    <TextView
+        android:id="@+id/tv_contactDateOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Date of Birth"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_portraitPicture" />
+
+    <TextView
+        android:id="@+id/tv_contactDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Contact Description"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/tv_contactDateOfBirth"
+        app:layout_constraintTop_toBottomOf="@+id/iv_portraitPicture" />
+
+    <TextView
+        android:id="@+id/tv_contactBusinessOpenHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Opening Hour"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactDateOfBirth" />
+
+    <TextView
+        android:id="@+id/tv_contactBusinessClosingHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Closing Hour"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/tv_contactBusinessOpenHour"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactDateOfBirth" />
+
+    <TextView
+        android:id="@+id/tv_contactWebsiteURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Website"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactBusinessOpenHour" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactWebsiteURL" />
+
+    <TextView
+        android:id="@+id/tv_contactBusinessName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Business Name"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/tv_contactName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_contactZipCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Zip Code"
+        android:textColor="#FFD1BC"
+        app:layout_constraintStart_toEndOf="@+id/tv_contactState"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactStreetAddress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

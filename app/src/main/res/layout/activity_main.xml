@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_addContact"
+        android:id="@+id/btn_addNewPersonalContact"
         android:layout_width="380dp"
         android:layout_height="53dp"
         android:layout_marginTop="84dp"
@@ -22,68 +22,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <Button
-        android:id="@+id/btn_searchDescription"
-        android:layout_width="380dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:background="#bebdbc"
-        android:text="@string/searchDescription"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_searchCity" />
-
-    <Button
-        android:id="@+id/btn_exit"
-        android:layout_width="380dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:background="#d1c2bc"
-        android:text="@string/exit"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_searchDescription" />
-
-    <Button
-        android:id="@+id/btn_searchCity"
-        android:layout_width="380dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:background="#abb7bc"
-        android:text="@string/searchCity"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_searchName" />
-
-    <Button
-        android:id="@+id/btn_searchName"
-        android:layout_width="380dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:background="#98b2bc"
-        android:text="@string/searchByName"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_showContactById" />
-
-    <Button
-        android:id="@+id/btn_showContactById"
+        android:id="@+id/btn_searchForContacts"
         android:layout_width="380dp"
         android:layout_height="53dp"
         android:layout_marginTop="8dp"
         android:background="#86adbc"
-        android:text="@string/showContactById"
+        android:text="@string/searchForContacts"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_addContact" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_addNewPersonalContact" />
 
     <TextView
         android:id="@+id/tv_title"
