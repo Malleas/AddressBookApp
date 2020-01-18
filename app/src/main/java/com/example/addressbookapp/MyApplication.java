@@ -1,22 +1,22 @@
 package com.example.addressbookapp;
 
-import android.app.Application;
+        import android.app.Application;
 
-import java.io.IOException;
 
 public class MyApplication extends Application {
 
-    private MyContacts myContacts = new MyContacts();
+    private MyContacts myContacts;
 
 
-    public MyApplication() throws IOException {
+    public MyApplication(){
     }
 
-    public MyContacts getMyContacts() {
+    public MyContacts getMyContacts(){
         return myContacts;
     }
 
-    public void setMyContacts(MyContacts myContacts) {
+    public void setMyContacts(MyContacts myContacts){
         this.myContacts = myContacts;
     }
+
 }

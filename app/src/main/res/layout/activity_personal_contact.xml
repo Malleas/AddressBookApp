@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
         android:backgroundTint="#ffd1bc"
         android:ems="10"
         android:hint="@string/cityHint"
         android:inputType="textPersonName"
         android:textColorHint="#ffd1bc"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_personalDateOfBirth"
         app:layout_constraintEnd_toStartOf="@id/et_personalState"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_personalStreetAddress" />
@@ -38,6 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_personalPhoneEntry"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -53,71 +54,13 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_personalStreetAddress"
         app:layout_constraintTop_toBottomOf="@+id/et_personalNameEntry" />
-
-    <EditText
-        android:id="@+id/et_personalPhotoName"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#ffd1bc"
-        android:ems="10"
-        android:hint="@string/photoNameHint"
-        android:inputType="textPersonName"
-        android:textColorHint="#ffd1bc"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_personalPhoneEntry" />
-
-    <EditText
-        android:id="@+id/et_personalPhotoDate"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#ffd1bc"
-        android:ems="10"
-        android:hint="@string/photoDatehint"
-        android:inputType="date"
-        android:textColorHint="#ffd1bc"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_personalPhotoName" />
-
-    <EditText
-        android:id="@+id/et_personalPhotoDescription"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#ffd1bc"
-        android:ems="10"
-        android:hint="@string/photoDescriptionHint"
-        android:inputType="textPersonName"
-        android:textColorHint="#ffd1bc"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_personalPhotoDate" />
-
-    <Button
-        android:id="@+id/btn_personalPhotoUpload"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="#60a3bc"
-        android:text="@string/addPhoto"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_personalPhotoDescription" />
 
     <EditText
         android:id="@+id/et_personalStreetAddress"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:backgroundTint="#ffd1bc"
         android:ems="10"
         android:hint="@string/streetAddressHint"
@@ -126,7 +69,8 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_personalPhotoUpload" />
+        app:layout_constraintBottom_toTopOf="@id/et_personalCity"
+        app:layout_constraintTop_toBottomOf="@+id/et_personalPhoneEntry" />
 
     <EditText
         android:id="@+id/et_personalState"
@@ -134,13 +78,13 @@
         android:layout_height="51dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:backgroundTint="#ffd1bc"
         android:ems="10"
         android:hint="@string/stateHint"
         android:inputType="textPersonName"
         android:textColorHint="#ffd1bc"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/et_personalDateOfBirth"
         app:layout_constraintEnd_toStartOf="@id/et_personalZipCode"
         app:layout_constraintStart_toEndOf="@+id/et_personalCity"
         app:layout_constraintTop_toBottomOf="@+id/et_personalStreetAddress" />
@@ -151,7 +95,6 @@
         android:layout_height="51dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:backgroundTint="#ffd1bc"
@@ -160,9 +103,11 @@
         android:inputType="number"
         android:textColorHint="#ffd1bc"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_personalDateOfBirth"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/et_personalState"
-        app:layout_constraintTop_toBottomOf="@+id/et_personalStreetAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/et_personalStreetAddress"
+        app:layout_constraintVertical_bias="0.471" />
 
     <EditText
         android:id="@+id/et_personalDateOfBirth"
@@ -177,6 +122,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_personalContactDescription"
         app:layout_constraintTop_toBottomOf="@+id/et_personalState" />
 
     <EditText
@@ -192,6 +138,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_addNewPersonalContact"
         app:layout_constraintTop_toBottomOf="@+id/et_personalDateOfBirth" />
 
     <Button
@@ -203,6 +150,7 @@
         android:text="@string/add"
         android:textColor="@android:color/white"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_personalContactDescription" />

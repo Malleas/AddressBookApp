@@ -1,8 +1,11 @@
 package com.example.addressbookapp;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +14,8 @@ import java.util.Scanner;
 public class FileAccessService implements DataAccessService {
 
     private List<BaseContact> contacts = new ArrayList<>();
+
+
 
     @Override
     public List<BaseContact> readAllContacts(String fileName) throws IOException {
@@ -23,7 +28,7 @@ public class FileAccessService implements DataAccessService {
             String[] items = new String[15];
             items = line.split(",");
             String contactType = items[0];
-            int contactId = Integer.valueOf(items[1]);
+            String contactId = items[1];
             String name = items[2];
             String phoneNumber = items[3];
             int photoId = Integer.valueOf(items[4]);
@@ -52,6 +57,19 @@ public class FileAccessService implements DataAccessService {
     }
 
     @Override
+    public List<BaseContact> readAllContacts(InputStream inputStream) throws IOException {
+        ArrayList<BaseContact> contacts = new ArrayList<>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+        String line;
+        while ((line = bufferedReader.readLine()) != null){
+            BaseContact contact = readOneContact(line);
+            contacts.add(contact);
+        }
+        return contacts;
+    }
+
+    @Override
     public void saveAllContacts(String fileName, List<BaseContact> contacts, boolean append) throws IOException {
         File file = new File(fileName);
         FileWriter fileWriter = new FileWriter(file, append);
@@ -60,12 +78,44 @@ public class FileAccessService implements DataAccessService {
         printWriter.close();
 
     }
+
+    private BaseContact readOneContact(String line){
+        String[] items = new String[15];
+        items = line.split(",");
+        String contactType = items[0];
+        String contactId = items[1];
+        String name = items[2];
+        String phoneNumber = items[3];
+        int photoId = Integer.valueOf(items[4]);
+        String locationAddress = items[5];
+        String city = items[6];
+        String state = items[7];
+        int zipCode = Integer.valueOf(items[8]);
+        Location location = new Location(locationAddress, city, state, zipCode);
+        if (items[0].equalsIgnoreCase( "Personal")) {
+            String dateOfBirth = items[9];
+            String contactDescription = items[10];
+            PersonalContact personContact = new PersonalContact(contactType, contactId, name, phoneNumber, photoId, location,
+                    dateOfBirth, contactDescription);
+            return personContact;
+        } else if (items[0].equalsIgnoreCase( "Business")) {
+            int openHour = Integer.valueOf(items[9]);
+            int closeHour = Integer.valueOf(items[10]);
+            String webUrl = items[11];
+            String businessName = items[12];
+            BusinessContact businessContact = new BusinessContact(contactType, contactId, name, phoneNumber, photoId,
+                    location, openHour, closeHour, webUrl, businessName);
+            return businessContact;
+        }
+        return null;
+    }
+
     public String contactListToString(List<BaseContact> contacts){
         String contactString = "";
         for(int i = 0; i<contacts.size();i++){
             if (contacts.get(i).getType().equalsIgnoreCase("Personal")) {
                 contactString = contacts.get(i).getType()
-                        + "," + Integer.toString(contacts.get(i).getContactId())
+                        + "," + contacts.get(i).getContactId()
                         + "," + contacts.get(i).getName()
                         + "," + contacts.get(i).getPhoneNumber()
                         + "," + Integer.toString(contacts.get(i).getPhotoId())
@@ -78,7 +128,7 @@ public class FileAccessService implements DataAccessService {
                         + "\r";
             }else if(contacts.get(i).getType().equalsIgnoreCase("Business")){
                 contactString = contacts.get(i).getType()
-                        + "," + Integer.toString(contacts.get(i).getContactId())
+                        + "," + contacts.get(i).getContactId()
                         + "," + contacts.get(i).getName()
                         + "," + contacts.get(i).getPhoneNumber() + ","
                         + Integer.toString(contacts.get(i).getPhotoId())

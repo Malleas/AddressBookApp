@@ -57,7 +57,7 @@ public class AddressBook {
 
     public void removeContactById(int contactId) {
         for (BaseContact contact : getContacts()) {
-            if (contact.getContactId() == contactId) {
+            if (contact.getContactId().equals(contactId)) {
                 System.out.println("Removing contact Number " + contactId + "\n");
                 contacts.remove(contact);
                 return;
@@ -67,7 +67,7 @@ public class AddressBook {
 
     public void displayContactById(int contactId) {
         for (BaseContact contact : getContacts()) {
-            if (contact.getContactId() == contactId) {
+            if (contact.getContactId().equals(contactId)) {
                 System.out.println("Displaying contact by Number " + contact.getContactId());
                 System.out.println(contact + "\n");
                 return;

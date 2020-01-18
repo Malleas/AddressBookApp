@@ -6,7 +6,7 @@ public class BusinessContact extends BaseContact {
     private String websiteURL;
     private String businessName;
 
-    public BusinessContact(String type, int contactId, String name, String phoneNumber, int photoId, Location location, int openingHour, int closingHour, String websiteURL, String businessName) {
+    public BusinessContact(String type, String contactId, String name, String phoneNumber, int photoId, Location location, int openingHour, int closingHour, String websiteURL, String businessName) {
         super(contactId, name, phoneNumber, photoId, location, type);
         this.openingHour = openingHour;
         this.closingHour = closingHour;

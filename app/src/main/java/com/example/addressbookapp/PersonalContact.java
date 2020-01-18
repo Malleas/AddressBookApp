@@ -31,7 +31,7 @@ public class PersonalContact extends BaseContact {
 
     public PersonalContact(){}
 
-    public PersonalContact(String type, int contactId, String name, String phoneNumber, int photoId, Location location,  String dateOfBirth, String description) {
+    public PersonalContact(String type, String contactId, String name, String phoneNumber, int photoId, Location location,  String dateOfBirth, String description) {
         super(contactId, name, phoneNumber, photoId, location, type);
         this.dateOfBirth = dateOfBirth;
         this.description = description;

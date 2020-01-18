@@ -2,7 +2,7 @@ package com.example.addressbookapp;
 
 public abstract class BaseContact {
 
-    private int contactId;
+    private String contactId;
     private String name;
     private String phoneNumber;
     private int photoId;
@@ -10,7 +10,7 @@ public abstract class BaseContact {
     private String type;
 
 
-    public BaseContact(int contactId, String name, String phoneNumber, int photoId, Location location, String type) {
+    public BaseContact(String contactId, String name, String phoneNumber, int photoId, Location location, String type) {
         this.contactId = contactId;
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -21,11 +21,11 @@ public abstract class BaseContact {
 
     public BaseContact(){}
 
-    public int getContactId() {
+    public String getContactId() {
         return contactId;
     }
 
-    public void setContactId(int contactId) {
+    public void setContactId(String contactId) {
         this.contactId = contactId;
     }
 

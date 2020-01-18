@@ -1,5 +1,7 @@
 package com.example.addressbookapp;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class DatabaseAccessService implements DataAccessService {
@@ -36,6 +38,11 @@ public class DatabaseAccessService implements DataAccessService {
 
     @Override
     public List<BaseContact> readAllContacts(String fileName) {
+        return null;
+    }
+
+    @Override
+    public List<BaseContact> readAllContacts(InputStream inputStream) throws IOException {
         return null;
     }
 

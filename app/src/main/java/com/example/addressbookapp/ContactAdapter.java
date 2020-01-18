@@ -1,6 +1,7 @@
 package com.example.addressbookapp;
 
 import android.app.Activity;
+import android.app.Person;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,19 +15,19 @@ public class ContactAdapter extends BaseAdapter {
     Activity mActivity;
     MyContacts myContacts;
 
-    public ContactAdapter(Activity mActivity, MyContacts contact) {
+    public ContactAdapter(Activity mActivity, MyContacts myContacts) {
         this.mActivity = mActivity;
-        this.myContacts = contact;
+        this.myContacts = myContacts;
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return myContacts.myContactsList.size();
     }
 
     @Override
-    public MyContacts getItem(int position) {
-        return null;
+    public BaseContact getItem(int position) {
+        return myContacts.myContactsList.get(position);
     }
 
     @Override
@@ -53,10 +54,7 @@ public class ContactAdapter extends BaseAdapter {
         TextView tv_contactwebsiteUrl = contactOneLine.findViewById(R.id.tv_contactWebsiteURL);
         ImageView iv_portraitPicture = contactOneLine.findViewById(R.id.iv_portraitPicture);
 
-        MyContacts myContacts = this.getItem(position);
-        BusinessContact businessContact = (BusinessContact) this.getItem(position);
-        PersonalContact personalContact = (PersonalContact) this.getItem(position);
-        int portrait_resource_numbers [] = {
+        int portraitResourceNumbers [] = {
                 R.drawable.image_001,
                 R.drawable.image_002,
                 R.drawable.image_003,
@@ -75,17 +73,19 @@ public class ContactAdapter extends BaseAdapter {
                 R.drawable.image_016
         };
 
-        tv_contactName.setText(myContacts.getMyContacts().get(position).getName());
-        tv_contactPhoneNumber.setText(myContacts.getMyContacts().get(position).getPhoneNumber());
-        tv_contactStreetAddress.setText(myContacts.getMyContacts().get(position).getLocation().getStreetAddress());
-        tv_contactCity.setText(myContacts.getMyContacts().get(position).getLocation().getCity());
-        tv_contactState.setText(myContacts.getMyContacts().get(position).getLocation().getState());
-        tv_contactZipCode.setText(myContacts.getMyContacts().get(position).getLocation().getZipCode());
-        iv_portraitPicture.setImageResource(portrait_resource_numbers[myContacts.getMyContacts().get(position).getPhotoId()]);
+        BaseContact contact = this.getItem(position);
+        tv_contactName.setText(contact.getName());
+        tv_contactPhoneNumber.setText(contact.getPhoneNumber());
+        tv_contactStreetAddress.setText(contact.getLocation().getStreetAddress());
+        tv_contactCity.setText(contact.getLocation().getCity());
+        tv_contactState.setText(contact.getLocation().getState());
+        tv_contactZipCode.setText(Integer.toString(contact.getLocation().getZipCode()));
+        iv_portraitPicture.setImageResource(portraitResourceNumbers[contact.getPhotoId()]);
 
-        String type = myContacts.getMyContacts().get(position).getType();
+        String type = myContacts.getMyContactsList().get(position).getType();
 
-        if(type.equals("Personal"){
+        if(contact instanceof PersonalContact){
+            PersonalContact personalContact = (PersonalContact) contact;
             tv_contactBusinessCloseHour.setVisibility(View.INVISIBLE);
             tv_contactBusinessOpenHour.setVisibility(View.INVISIBLE);
             tv_contactBusinessName.setVisibility(View.INVISIBLE);
@@ -93,13 +93,14 @@ public class ContactAdapter extends BaseAdapter {
             tv_contactDateOfBirth.setText(personalContact.getDateOfBirth());
             tv_contactDescription.setText(personalContact.getDescription());
 
-        }else if(type.equals("Business")){
+        }else if(contact instanceof BusinessContact){
+            BusinessContact businessContact = (BusinessContact) contact;
             tv_contactDateOfBirth.setVisibility(View.INVISIBLE);
             tv_contactDescription.setVisibility(View.INVISIBLE);
-            tv_contactBusinessName.setText(myContacts.getMyContacts().indexOf());
-            tv_contactBusinessOpenHour.setText(businessContact.getOpeningHour());
-            tv_contactBusinessCloseHour.setText(businessContact.getClosingHour());
+            tv_contactBusinessOpenHour.setText(Integer.toString(businessContact.getOpeningHour()));
+            tv_contactBusinessCloseHour.setText(Integer.toString(businessContact.getClosingHour()));
             tv_contactwebsiteUrl.setText(businessContact.getWebsiteURL());
+            tv_contactBusinessName.setText(businessContact.getBusinessName());
         }
 
 
