@@ -62,4 +62,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btn_email"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:background="#98B2BC"
+        android:text="Email"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_searchForContacts" />
+
+    <Button
+        android:id="@+id/btn_text"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:background="#ABB7BC"
+        android:text="Text"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_email" />
+
+    <Button
+        android:id="@+id/btn_map"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:background="#BEBDBC"
+        android:text="Map"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_text" />
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:background="#D1C2BC"
+        android:text="Call"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_map" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
